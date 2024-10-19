@@ -1,0 +1,738 @@
+@charset "utf-8";
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+/*공통*/
+.txtBox {
+    background: #fff;
+    width: 600px;
+    display: inline-block;
+    position: relative;
+    padding: 20% 0;
+}
+
+.intro .txtBox {
+    padding: 300px 0;
+}
+.about .txtBox {
+    padding: 90px 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+/*menulnb*/
+.section {
+    position: relative;
+}
+.mlnb {
+    background: rgba(0, 0, 0, 1);
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    transition: width 1s;
+    padding: 80px 0;
+}
+.mlnb li {
+    text-align: center;
+    line-height: 85px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+}
+.mlnb li:first-child {
+    font-size: 40px;
+    text-align: right;
+    padding-right: 100px;
+}
+.mlnb li i {
+    cursor: pointer;
+}
+.mlnb li a:after {
+    content: '';
+    max-width: 0;
+    height: 8px;
+    display: block;
+    background: rgba(250, 85, 162, 0.8);
+    transition: max-width 0.5s;
+    margin: 0 auto;
+}
+.mlnb li:first-child:after {
+    display: none;
+}
+.mlnb li:hover a:after {
+    max-width: 215px;
+}
+.mlnb li a {
+    color: #fff;
+}
+
+.pageName {
+    position: absolute;
+    top: 37px;
+    left: 192px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.pageName span {
+    vertical-align: middle;
+}
+.pageName:after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: #333;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.logo {
+    width: 15px;
+    height: 93px;
+    position: absolute;
+    top: 109px;
+    left: 13px;
+}
+
+.introTxt {
+    /*width: 357px;*/
+    position: absolute;
+    top: 50%;
+    margin-top: -153px;
+    left: 278px;
+}
+.introTxt dt {
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: 900;
+    color: rgb(250, 85, 162);
+}
+.introTxt dd {
+    font-size: 23px;
+    font-weight: 400;
+}
+.introTxt dd span {
+    font-weight: 600;
+}
+
+.inner {
+    position: relative;
+}
+.Btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+.Btn i {
+    font-size: 50px;
+}
+
+#section1 .txtBox,
+#section2 .txtBox,
+#section3 .txtBox,
+#section4 .txtBox,
+#section5 .txtBox {
+    background: rgba(102, 112, 103, 0.2);
+}
+
+/***Intro***/
+#section0 {
+    background: url(../images/introBg.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+
+/***About***/
+#section1 {
+    background: #7577d1;
+    width: 100%;
+}
+
+/**좌측메뉴**/
+.aboutL {
+    float: left;
+}
+.aboutTxt {
+    text-align: center;
+}
+
+.aboutPhoto {
+    background: url(../images/profilePhoto.jpg) no-repeat center center;
+    background-size: cover;
+    width: 334px;
+    height: 334px;
+    text-indent: -9999px;
+    margin: 0 auto;
+}
+
+.aboutIntro {
+    width: 490px;
+    line-height: 34px;
+    margin: 30px auto;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+}
+.aboutIntro span {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.nameSign {
+    text-align: right;
+    margin-right: 13px;
+}
+.name {
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 50px;
+}
+/* .sign {
+    vertical-align: middle;
+    width: 112px;
+    height: auto;
+} */
+
+/**우측메뉴**/
+.aboutR {
+    float: right;
+    margin: 0 auto;
+    line-height: 35px;
+    padding: 78px 0;
+}
+
+.aboutR dt {
+    font-size: 30px;
+    font-family: 'tmonmonsori', sans-serif;
+    padding-bottom: 5px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.aboutR dd {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.aboutR dd:last-child {
+    padding-bottom: 0;
+}
+.aboutR dd span {
+    font-size: 22px;
+    font-weight: 500;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.aboutR dd p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/***Portfolio 공통***/
+/**좌측메뉴**/
+.portL {
+    float: left;
+}
+.portTxt {
+    text-align: left;
+    margin-left: 279px;
+    padding: 35px 0;
+}
+.portTxt p {
+    font-size: 20px;
+    font-weight: 700;
+}
+.portTxt h2 {
+    font-size: 60px;
+    font-weight: 900;
+}
+.portTxt h3 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.mainPage {
+    background: url(../images/main1\ copy.png) no-repeat center center;
+    /* background: url(/images/main01.png) no-repeat center center; */
+    background-size: cover;
+    width: 440px;
+    height: 250px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    filter: brightness(1);
+}
+.mainPage a {
+    display: block;
+    width: 440px;
+    height: 250px;
+    text-indent: -9999px;
+}
+.mainPage:hover{
+    filter: brightness(0.3);
+}
+/**모바일 뷰버튼**/
+/* .portL .txtBox {
+    position: relative;
+}
+.mViewBtn {
+    background: url(../images/goOff.png) no-repeat center center;
+    background-size: cover;
+    width: 80px;
+    height: 68px;
+    position: absolute;
+    top: 130px;
+    right: 0px;
+}
+.mViewBtn a {
+    font-size: 0;
+    display: block;
+    width: 80px;
+    height: 68px;
+}
+.mViewBtn:hover {
+    background: url(../images/goOn.png) no-repeat center center;
+    background-size: cover;
+    width: 80px;
+    height: 68px;
+    position: absolute;
+    top: 130px;
+    right: 0px;
+    text-indent: -9999px;
+} */
+/**모바일 뷰버튼**/
+
+/**우측메뉴**/
+.portR {
+    float: right;
+    width: 535px;
+    margin: 0 auto;
+    line-height: 42px;
+}
+.portR dt {
+    width: 135px;
+    font-size: 25px;
+    font-family: 'tmonmonsori', sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.portR dt:last-child {
+    margin-bottom: 0;
+}
+.portR .firstTit {
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.portR .lastTit {
+    margin-bottom: 0;
+}
+.portR dd {
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+}
+
+.portR .firstTxt {
+    display: block;
+    width: 100%;
+}
+.portR .lastTxt {
+    margin-bottom: 0;
+}
+.preview{
+    float: right;
+    width: 535px;
+    height: 500px;
+    margin-top: 40px;
+}
+.preview p{
+    width: 135px;
+    font-size: 25px;
+    font-family: 'tmonmonsori', sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.preview ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+.preview li{
+    width: 50%;
+}
+.preview img{
+    width: 250px;
+    height: auto;
+    margin: 5px;
+}
+/**뷰버튼**/
+
+.viewBtnOn {
+    background: url(../images/viewBtn.png) no-repeat center center;
+    width: 273px;
+    height: 69px;
+    margin: 0 35px;
+}
+.viewBtnOn a {
+    display: block;
+    width: 273px;
+    height: 69px;
+    text-indent: -9999px;
+}
+.viewBtnOn:hover {
+    background: url(../images/viewBtnHover.png) no-repeat center center;
+}
+
+/***Portfolio01***/
+#section2 {
+    background: #f597c3;
+    width: 100%;
+}
+.portfolio01 .viewBtnOn {
+    padding: 5% 20%;
+}
+
+/***Portfolio02***/
+#section3 {
+    background: #ccc;
+    width: 100%;
+}
+/**좌측메뉴**/
+.portfolio02 .mainPage {
+    background: url(../images/main2copy.png) no-repeat center center;
+    background-size: cover;
+    height: 250px;
+    width: 440px;
+}
+/* .portfolio02 .portTxt {
+} */
+
+/**우측메뉴**/
+.portfolio02 .viewBtnOn {
+    padding: 5% 20%;
+}
+
+/***Portfolio03***/
+#section4 {
+    background: #fa313f;
+    width: 100%;
+    /* padding: 51px 0; */
+}
+/**좌측메뉴**/
+.portfolio03 .mainPage {
+    background: url(../images/main3copy.png) no-repeat center center;
+    background-size: cover;
+    width: 440px;
+    height: 250px;
+}
+/* .portfolio03 .txtBox{
+      padding: 140px 0;
+} */
+.portfolio03 .portTxt {
+    padding-bottom: 50px;
+}
+
+/**우측메뉴**/
+.portfolio03 .portR .lastTit {
+    vertical-align: top;
+}
+.portfolio03 .portR .lastTxt {
+    width: 260px;
+    vertical-align: top;
+}
+
+.portfolio03 .viewBtnOn {
+    padding: 5% 20%;
+}
+
+/***Portfolio05***/
+#section5 {
+    background: #00b2f8;
+    width: 100%;
+}
+/**좌측메뉴**/
+.portfolio04 .mainPage {
+    background: url(../images/main4copy.png) no-repeat center center;
+    background-size: cover;
+    width: 440px;
+    height: 250px;
+}
+.portfolio04 .txtBox {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/**우측메뉴**/
+.portfolio04 .portR .lastTit {
+    vertical-align: top;
+}
+.portfolio04 .portR .lastTxt {
+    width: 260px;
+    vertical-align: top;
+}
+
+.portfolio04 .viewBtnOn {
+    padding: 5% 20%;
+}
+
+/***Portfolio05***/
+#section6 {
+    background: #6eaf77;
+    width: 100%;
+}
+/**좌측메뉴**/
+.portfolio05 .txtBox {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 90px 0;
+}
+.portfolio05 .gallery{
+    width: 1500px;
+    height: 650px;
+}
+.portfolio05 .gallery ul{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.portfolio05 .gallery li{
+    text-align: center;
+    width: 33.3%;
+}
+.portfolio05 .gallery li:first-child{
+    width: 493px;
+    height: 300px;
+    line-height: 300px;
+    background-image: url(../images/mockup_b.jpg);
+    background-size: cover;
+}
+.portfolio05 .gallery li:nth-child(2){
+    width: 493px;
+    height: 300px;
+    line-height: 300px;
+    background-image: url(../images/mockup_u.jpg);
+    background-size: cover;
+}
+.portfolio05 .gallery li:nth-child(3){
+    width: 493px;
+    height: 300px;
+    line-height: 300px;
+    background-image: url(../images/mockup_p.jpg);
+    background-size: cover;
+}
+.portfolio05 .gallery li:nth-child(4){
+    width: 493px;
+    height: 300px;
+    line-height: 300px;
+    background-image: url(../images/mockup_t.jpg);
+    background-size: cover;
+}
+.portfolio05 .gallery li:nth-child(5){
+    width: 493px;
+    height: 300px;
+    line-height: 300px;
+    background-image: url(../images/mockup_c.jpg);
+    background-size: cover;
+}
+.portfolio05 .gallery li:nth-child(6){
+    width: 493px;
+    height: 300px;
+    line-height: 300px;
+    background-image: url(../images/mockup_h.jpg);
+    background-size: cover;
+}
+.portfolio05 .gallery a{
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.portfolio05 .gallery a:hover{
+    text-indent: 0px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio05 .gallery_bg{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio05 .gallery_img{
+    /* position: fixed; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 50;
+    margin: 2000px 0 0 -500px;
+    width: 1200px;
+    height: 700px;
+    overflow-y:scroll;
+}
+.portfolio05 .gallery_img::-webkit-scrollbar{
+    width: 20px;
+}
+.portfolio05 .gallery_img::-webkit-scrollbar-thumb{
+    background-color: #f597c3;
+    border-radius: 20px;
+}
+.portfolio05 .gallery_img::-webkit-scrollbar-track{
+    background-color: #000;
+}
+.portfolio05 .gallery_img>.close{
+    display: block;
+    height: 1400px;
+    text-indent: -9999px;
+    background-color: #fff;
+}
+
+/**우측메뉴**/
+
+
+/***Contact***/
+#section7 {
+    background: #d5c4c4;
+    padding: 5% 0;
+}
+.contact .inner {
+    position: relative;
+}
+.contact .portTxt h2 {
+    line-height: 65px;
+}
+
+.portTxt img {
+    width: 23px;
+    vertical-align: middle;
+}
+.portTxt span {
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.contact .logo {
+    position: absolute;
+    top: 109px;
+    left: 13px;
+}
+.contact .mail {
+    position: absolute;
+    left: 13px;
+    bottom: 13px;
+}
+
+.portTxt h2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact .portTxt h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 50px 0;
+}
+
+.cInfo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+.cInfo li {
+    position: relative;
+    padding: 8px 0;
+}
+.cInfo li span {
+    cursor: pointer;
+}
+/*.triangle{
+	display: inline-block;
+	width: 0;
+	height: 0px;
+	border-top: 50px solid transparent;
+	border-right: 50px solid #fff;
+	border-left: 50px solid f;
+	border-bottom: 50px solid transparent;
+	text-indent: -9999px;
+	vertical-align: middle;
+}*/
+
+.contact .txtBox {
+    background: none;
+    width: 100%;
+    height: auto;
+}
+
+.contact .cTxtBox {
+    width: 80%;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 auto;
+    /* margin-top: 50px; */
+}
+.cTxtBox p {
+    font-size: 18px;
+    font-weight: 300;
+}
+.cTxtBox span {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact .portTxt span {
+    vertical-align: top;
+}
+/*.cInfo .copyBtn01{
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: -50px;
+	cursor: pointer;
+	width: 40px;
+}
+.cInfo .copyBtn02{
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: -50px;
+	cursor: pointer;
+	width: 40px;
+}
+
+.cInfo .copyBtn03{
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+	right: -50px;
+	cursor: pointer;
+	width: 40px;
+}*/
